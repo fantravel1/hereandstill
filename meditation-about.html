@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Here and Still - our mission to make meditation accessible to everyone through simple, beautiful technology.">
+    <meta name="keywords" content="about here and still, meditation app, mindfulness mission, meditation technology">
+    <title>About - Here and Still</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #001a33 0%, #003366 50%, #004d99 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+
+        .story-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            animation: fadeInUp 1s 0.3s forwards;
+        }
+
+        .story-section h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #66b3ff;
+        }
+
+        .story-section p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+            animation-delay: calc(var(--order) * 0.1s + 0.5s);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #99ccff;
+        }
+
+        .value-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .mission-section {
+            background: rgba(102, 179, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            border: 1px solid rgba(102, 179, 255, 0.3);
+            opacity: 0;
+            animation: fadeInUp 1s 0.8s forwards;
+        }
+
+        .mission-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #66b3ff;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeInUp 1s 1s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .story-section {
+                padding: 25px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo-link">HERE & STILL</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/tips">Tips & Tricks</a>
+                <a href="/about" class="active">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="hero-section">
+            <h1>About Here & Still</h1>
+            <p class="tagline">"In the rush of life, find your pause"</p>
+        </section>
+
+        <section class="story-section">
+            <h2>Our Story</h2>
+            <p>Here & Still was born from a simple observation: in our hyperconnected world, we've forgotten how to disconnect. We check our phones 96 times a day, our minds race with endless to-dos, and genuine stillness feels impossible.</p>
+            
+            <p>We believed meditation shouldn't require apps with countless features, subscriptions, or 30-day programs. Sometimes, all you need is to stop, breathe, and be reminded that this moment is enough.</p>
+            
+            <p>So we created something different. No sign-ups. No ads. No tracking. Just open the page, and your meditation begins. Five minutes of simplicity in a complex world.</p>
+        </section>
+
+        <section class="story-section">
+            <h2>Why We Built This</h2>
+            <p>Traditional meditation apps often create more stress than they solve. Settings to configure, streaks to maintain, achievements to unlock – they gamify what should be sacred.</p>
+            
+            <p>Here & Still strips away everything unnecessary. One timer. One purpose. One moment at a time.</p>
+
+            <div class="values-grid">
+                

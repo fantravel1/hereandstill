@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover meditation tips and tricks to deepen your practice. Learn techniques for better focus, dealing with distractions, and making meditation work for you.">
+    <meta name="keywords" content="meditation tips, mindfulness tricks, meditation techniques, meditation advice">
+    <title>Tips & Tricks - Here and Still</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #001a33 0%, #003366 50%, #004d99 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s 0.2s forwards;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+            animation-delay: calc(var(--order) * 0.1s);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tip-card h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #66b3ff;
+        }
+
+        .tip-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .pro-section {
+            background: rgba(102, 179, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            border: 1px solid rgba(102, 179, 255, 0.3);
+            opacity: 0;
+            animation: fadeInUp 1s 1s forwards;
+        }
+
+        .pro-section h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .technique-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .technique {
+            display: flex;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .technique-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .technique-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #99ccff;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .pro-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo-link">HERE & STILL</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/tips" class="active">Tips & Tricks</a>
+                <a href="/about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Tips & Tricks</h1>
+        <p class="subtitle">Enhance your meditation practice with these proven techniques</p>
+
+        <div class="tips-grid">
+            <div class="tip-card" style="--order: 1">
+                <span class="tip-icon">🌊</span>
+                <h3>Ride the Waves</h3>
+                <p>Thoughts are like waves – don't fight them. Let them rise and fall naturally while you rest in awareness, like floating on the ocean.</p>
+            </div>
+
+            <div class="tip-card" style="--order: 2">
+                <span class="tip-icon">⚓</span>
+                <h3>Find Your Anchor</h3>
+                <p>When distracted, return to your breath as an anchor. Count breaths 1-10, then start over. This gives your mind a gentle task.</p>
+            </div>
+
+            <div class="tip-card" style="--order: 3">
+                <span class="tip-icon">🎵</span>
+                <h3>Use Sound</h3>
+                <p>Notice ambient sounds without labeling them. Let noises become part of your meditation rather than distractions.</p>
+            </div>
+
+            <div class="tip-card" style="--order: 4">
+                <span class="tip-icon">🌅</span>
+                <h3>Morning Magic</h3>
+                <p>Meditate before checking your phone. This protects your mind's clarity and sets a peaceful tone for the entire day.</p>
+            </div>
+
+            <div class="tip-card" style="--order: 5">
+                <span class="tip-icon">💫</span>
+                <h3>Micro-Meditations</h3>
+                <p>Take three conscious breaths at red lights, before meals, or between tasks. These moments add up to profound presence.</p>
+            </div>
+
+            <div class="tip-card" style="--order: 6">
+                <span class="tip-icon">🤲</span>
+                <h3>Body Scan</h3>
+                <p>Quickly scan from head to toe, releasing tension. This grounds you in physical sensation and out of mental loops.</p>
+            </div>
+        </div>
+
+        <section class="pro-section">
+            <h2>Advanced Techniques</h2>
+            
+            <div class="technique-list">
+                <div class="technique">
+                    <div class="technique-number">1</div>
+                    <div class="technique-content">
+                        <h4>The STOP Method</h4>
+                        <p><strong>S</strong>top what you're doing. <strong>T</strong>ake a breath. <strong>O</strong>bserve your thoughts and feelings. <strong>P</strong>roceed with awareness. Use this anytime you feel overwhelmed.</p>
+                    </div>
+                </div>
+
+                <div class="technique">
+                    <div class="technique-number">2</div>
+                    <div class="technique-content">
+                        <h4>Loving-Kindness Boost</h4>
+                        <p>During your 5 minutes, silently repeat: "May I be happy. May I be peaceful. May I be free from suffering." Extend these wishes to others in your final minute.</p>
+                    </div>
+                </div>
+
+                <div class="technique">
+                    <div class="technique-number">3</div>
+                    <div class="technique-content">
+                        <h4>The 4-7-8 Breath</h4>
+                        <p>Inhale for 4 counts, hold for 7, exhale for 8. This activates your parasympathetic nervous system, creating instant calm. Perfect for anxiety.</p>
+                    </div>
+                </div>
+
+                <div class="technique">
+                    <div class="technique-number">4</div>
+                    <div class="technique-content">
+                        <h4>Visualization Power</h4>
+                        <p>Picture a peaceful scene – a beach, forest, or mountain. Engage all senses: what do you see, hear, smell? This deepens relaxation.</p>
+                    </div>
+                </div>
+
+                <div class="technique">
+                    <div class="technique-number">5</div>
+                    <div class="technique-content">
+                        <h4>The Noting Practice</h4>
+                        <p>When thoughts arise, simply note "thinking" and return to breath. For emotions, note "feeling." This creates healthy distance from mental activity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

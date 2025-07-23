@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to meditate effectively with our simple guides and techniques. Master the art of mindfulness in just 5 minutes a day.">
+    <meta name="keywords" content="how to meditate, meditation guide, mindfulness tutorial, meditation for beginners">
+    <title>How to Meditate - Here and Still Blog</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #001a33 0%, #003366 50%, #004d99 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: fadeInUp 1s 0.2s forwards;
+        }
+
+        .blog-post {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            animation: fadeInUp 1s 0.4s forwards;
+        }
+
+        .blog-post h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #66b3ff;
+        }
+
+        .blog-post h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin: 30px 0 15px;
+            color: #99ccff;
+        }
+
+        .blog-post p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .highlight-box {
+            background: rgba(102, 179, 255, 0.2);
+            border-left: 4px solid #66b3ff;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-post {
+                padding: 25px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo-link">HERE & STILL</a>
+            <div class="nav-links">
+                <a href="/" >Home</a>
+                <a href="/blog" class="active">Blog</a>
+                <a href="/tips">Tips & Tricks</a>
+                <a href="/about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>How to Meditate</h1>
+        <p class="subtitle">Simple, practical guides to start your meditation journey</p>
+
+        <article class="blog-post">
+            <h2>The 5-Minute Meditation Method</h2>
+            
+            <p>Welcome to the simplest way to transform your day. Our 5-minute meditation method is designed for real people with real lives – no experience necessary.</p>
+
+            <h3>Why 5 Minutes?</h3>
+            <p>Research shows that even 5 minutes of meditation can reduce stress, improve focus, and enhance emotional well-being. It's long enough to make a difference, yet short enough to fit into any schedule.</p>
+
+            <div class="highlight-box">
+                <p><strong>Remember:</strong> The best meditation practice is the one you actually do. Start with 5 minutes, and let it grow naturally.</p>
+            </div>
+
+            <h3>Getting Started: The Basics</h3>
+            
+            <p><span class="step-number">1</span><strong>Find Your Space</strong><br>
+            You don't need a special room or cushion. Any quiet spot where you can sit comfortably works – your desk chair, couch, or even your car during lunch.</p>
+
+            <p><span class="step-number">2</span><strong>Open Here & Still</strong><br>
+            Visit our homepage on your phone or computer. The timer starts automatically, creating an instant meditation space.</p>
+
+            <p><span class="step-number">3</span><strong>Sit Comfortably</strong><br>
+            Keep your back straight but not rigid. Rest your hands naturally. Close your eyes or soften your gaze downward.</p>
+
+            <p><span class="step-number">4</span><strong>Focus on Your Breath</strong><br>
+            Notice the natural rhythm of your breathing. When your mind wanders (and it will), gently return attention to your breath.</p>
+
+            <p><span class="step-number">5</span><strong>End with Intention</strong><br>
+            When the gentle bell sounds, take a moment to read the phrase that appears. Let it guide your transition back to daily life.</p>
+
+            <h3>Common Questions</h3>
+
+            <p><strong>What if I can't stop thinking?</strong><br>
+            Perfect! Noticing your thoughts is meditation. The goal isn't to empty your mind but to observe it with kindness.</p>
+
+            <p><strong>What if 5 minutes feels too long?</strong><br>
+            Start with what feels comfortable. Even 2-3 minutes is beneficial. Build up gradually.</p>
+
+            <p><strong>When should I meditate?</strong><br>
+            Anytime works, but many find morning meditation sets a calm tone for the day, while evening practice helps unwind.</p>
+
+            <a href="/" class="cta-button">Start Your 5-Minute Session</a>
+        </article>
+
+        <article class="blog-post">
+            <h2>Building a Daily Practice</h2>
+            
+            <p>Consistency transforms meditation from an activity into a life-changing practice. Here's how to make it stick.</p>
+
+            <h3>The 21-Day Challenge</h3>
+            <p>Commit to 5 minutes daily for 21 days. Use our app at the same time each day to build the neural pathways of habit.</p>
+
+            <div class="highlight-box">
+                <p><strong>Pro tip:</strong> Link meditation to an existing habit. Meditate right after your morning coffee or before checking emails.</p>
+            </div>
+
+            <h3>Tracking Your Progress</h3>
+            <p>Notice subtle changes: Are you sleeping better? Reacting less to stress? Feeling more present? These small shifts compound over time.</p>
+
+            <p>Remember, some days will feel easier than others. That's not failure – it's practice. Show up, press start, and trust the process.</p>
+        </article>
+    </main>
+</body>
+</html>
